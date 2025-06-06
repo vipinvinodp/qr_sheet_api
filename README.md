@@ -1,27 +1,20 @@
+# QR Code Label Generator with Logo
+
+This API generates a Word document with up to 50 QR codes. Each code includes a center image (`doll.png`) and a text label.
+
+### Endpoint
+`POST /generate_labels`
+
+### Request Body
+```json
 {
   "data": [
     {
-      "X1": "Name1",
-      "X2": "Description for Item 1",
-      "X3": "Miscellaneous A",
-      "X4": ["Location1", "Shelf A"],
-      "X5": "CodeA"
-    },
-    {
-      "X1": "Name2",
-      "X2": "Description for Item 2",
-      "X3": "Miscellaneous B",
-      "X4": ["Location2", "Shelf B"],
-      "X5": "CodeB"
-    },
-    {
-      "X1": "Name3",
-      "X2": "Description for Item 3",
-      "X3": "Miscellaneous C",
-      "X4": ["Location3", "Shelf C"],
-      "X5": "CodeC"
+      "X1": "ItemName",
+      "X2": "Label",
+      "X3": "Extra",
+      "X4": ["LocationA", "LocationB"],
+      "X5": "Code"
     }
-
-    // ...up to 50 items total
   ]
 }
