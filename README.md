@@ -1,25 +1,27 @@
-# QR Sheet Generator API
-
-This is a Flask API that accepts a list of data in JSON format and returns an A4-style PNG sheet containing up to 50 QR codes.
-
-### Endpoint:
-POST `/generate_sheet`
-
-### Input:
-```json
 {
   "data": [
     {
       "X1": "Name1",
-      "X2": "Desc1",
-      "X3": "Misc1",
-      "X4": ["XMisc1", "YMisc1"],
-      "X5": "RMisc1"
+      "X2": "Description for Item 1",
+      "X3": "Miscellaneous A",
+      "X4": ["Location1", "Shelf A"],
+      "X5": "CodeA"
     },
-    ...
+    {
+      "X1": "Name2",
+      "X2": "Description for Item 2",
+      "X3": "Miscellaneous B",
+      "X4": ["Location2", "Shelf B"],
+      "X5": "CodeB"
+    },
+    {
+      "X1": "Name3",
+      "X2": "Description for Item 3",
+      "X3": "Miscellaneous C",
+      "X4": ["Location3", "Shelf C"],
+      "X5": "CodeC"
+    }
+
+    // ...up to 50 items total
   ]
 }
-```
-
-### Output:
-Returns a PNG image of QR codes arranged in a 5x10 grid (fits A4 size).
